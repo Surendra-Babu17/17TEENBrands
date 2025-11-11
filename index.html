@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/shopping-bag.png">
+    <title>7TEEN Brand Homepage</title>
+</head>
+
+<body>
+   
+
+
+    <script src="./main.js"></script>
+    <style>
+        /* ===== Basic Reset ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* ===== Body with Smooth Gradient Background ===== */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: linear-gradient(135deg, #5A60F3, #8C5CF5, #b025d7); */
+            /* background-color: #0a81d0; */
+            /* background: linear-gradient( #009245,#FCEE21); */
+                background: linear-gradient(orange,  );
+            background-size: 200% 200%;
+            animation: bgMove 8s ease infinite;
+            
+        }
+
+        /* Subtle gradient animation */
+        @keyframes bgMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* ===== Common Container ===== */
+        .home {
+            /* background: rgba(15, 10, 10, 0.15); */
+            /* background-color: #ffffff; */
+            background: linear-gradient(#2E3192, #1BFFFF );
+            backdrop-filter: blur(10px);
+            padding: 100px;
+            border-radius: px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 340px;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            
+            
+        }
+
+        .home:hover{
+            cursor: pointer;
+           box-shadow: 0px 0px 10px white;
+            border: 2px whitesmoke;
+
+            
+            border-radius: 5px;
+        }
+        /* ===== Headings ===== */
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* ===== Input Groups ===== */
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #eee;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        /* Focus effect */
+        input:focus {
+            border: 2px solid #7a5af8;
+            box-shadow: 0 0 6px rgba(122, 90, 248, 0.4);
+            outline: none;
+            color: white;
+        }
+
+        /* ===== Buttons ===== */
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            /* background: linear-gradient(90deg, #32ae3a, #7be115); */
+            background: linear-gradient(white) ;
+            color: #090e29;
+
+
+            /* color: white; */
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        button:hover {
+            background: linear-gradient(90deg, #090e29, #1589e1);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* ===== Home Page Buttons (Side-by-Side) ===== */
+        #login,
+        #register {
+            width: 130px;
+            margin: 10px;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 450px) {
+            div {
+                width: 90%;
+                padding: 25px;
+            }
+        }
+img {
+  width: 200px;
+  height: auto;
+  animation: moveUpDown 3s ease-in-out infinite;
+}
+
+/* Keyframes for up-down animation */
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translatex(70px);
+  }
+  50% {
+    transform: translatex(-20px);
+  }
+}
+        
+    </style>
+    <h1></h1><br>
+    
+    <div style="display: flex; flex-direction: column; margin-right: 00px;; padding: 90px;" ><img src="./images/woman.png" style="justify-content: center; width: 300px; border-radius: ; animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); border: #1BFFFF;"></div>
+
+     <div class="home">
+        <!-- <h1>7Teen Brands</h1> -->
+        <h3 style="color: rgb(238, 238, 240);">Wellcome To <br>
+            <h1 style="font-family: 'Times New Roman', Times, serif;">7TEEN BRANDS</h1>
+        </h3>
+        <p style="font-size: 13px; color: rgb(238, 236, 236); ">First Time or Already an Account Choose 👇</p>
+        <button id="login "onclick=login()>Login</button> <button onclick=reg()>Register</button> 
+        <a></a>
+        
+        <p></p>
+    </div><br>
+    
+   
+    <scripts src="./main.js"></scripts>
+</body>
+
+</html>

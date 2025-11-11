@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7TEEN Brand Login Page</title>
+    <link rel="icon" type="image/png" href="./images/key.png">
+    <style>
+        /* ===== Basic Reset ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* ===== Background (soft dynamic gradient) ===== */
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             /* background-color: #7c4af2; */
+            background: linear-gradient(#662D8C, #ED1E79);
+            /* background: linear-gradient(120deg, #c44e12, #acb6e5); */ 
+            /* background: linear-gradient(120deg, #7c4af2 ); */
+            background-size: 200% 200%;
+            animation: bgMove 6s ease infinite;
+        }
+
+        @keyframes bgMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* ===== Login Card ===== */
+        .home {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            width: 320px;
+            text-align: center;
+            
+        }
+        .home:hover{
+            
+            cursor: pointer;
+            box-shadow: 0px 0px 10px white;
+            border: 2px whitesmoke;
+        }
+
+        /* ===== Heading ===== */
+        h1 {
+            color: #9b0ca5;
+            margin-bottom: 20px;
+        }
+
+        /* ===== Input Fields ===== */
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #444;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        input:focus {
+            border-color: #540663;
+            box-shadow: 0 0 6px rgba(106, 142, 240, 0.4);
+            outline: none;
+        }
+
+        /* ===== Button ===== */
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #920e80, #be089a);
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #3a074a, #e008e0);
+            transform: translateY(-2px);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 400px) {
+            div {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; margin-right: 00px;;; margin-right: ; background: linear-gradient();" class="home2" ><img src="./images/mobile-shopping.png" style="justify-content: center; width: 300px;"></div>
+    
+    <div class="home">
+        <h1>Login</h1>
+        <form>
+          
+            <input type="email" id="user_email" placeholder="Enter email" required>
+            <input type="password" id="user_password" placeholder="Enter password"  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}" >
+            <p id="demo" style="margin-top: 50px; color: rgb(227, 11, 11);"></p>
+            <button type="submit" onclick=log_sub()>Login</button>
+            <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-top: 5px;">7TEEN Brands</p><a href="./register.html" style="font-size: 10px;">Create account</a>
+        </form>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
