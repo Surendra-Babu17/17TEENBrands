@@ -2,157 +2,142 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <link rel="icon" type="image/png" href="./images/add-user.png">
-    <title>Register Form</title>
-    <style>
-        /* ===== Basic Reset ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register • 7TEEN Brands</title>
+  <link rel="icon" type="image/png" href="./images/add-user.png">
+  <style>
+    /* ===== Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-        /* ===== Background (same as login) ===== */
-        body {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* background: linear-gradient(#2E3192, #1BFFFF ); */
-            background: linear-gradient(#662D8C, #ED1E79);
-            background: linear-gradient(120deg,);
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #662D8C, #ED1E79);
+      background-size: 200% 200%;
+      animation: bgShift 6s ease infinite;
+    }
 
-            background-size: 200% 200%;
-            animation: bgMove 6s ease infinite;
-        }
-          div:hover{
-           
-            cursor: pointer;
-            box-shadow: 0px 0px 10px white;
-        }
-        @keyframes bgMove {
-            0% {
-                background-position: 0% 50%;
-            }
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-            50% {
-                background-position: 100% 50%;
-            }
+    /* ===== Glassmorphic Card ===== */
+    .register-box {
+      width: 340px;
+      padding: 35px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      text-align: center;
+      color: white;
+    }
 
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+    .register-box h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      color: #fff;
+      letter-spacing: 1px;
+    }
 
-        /* ===== Register Card ===== */
-        div {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-            width: 340px;
-            text-align: center;
-        }
+    .register-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      font-size: 15px;
+      transition: 0.3s;
+    }
 
-        /* ===== Heading ===== */
-        h1 {
-            color: #830c7f;
-            margin-bottom: 20px;
-        }
+    .register-box input::placeholder {
+      color: #eee;
+    }
 
-        /* ===== Input Fields ===== */
-        .input-group {
-            text-align: left;
-            margin-bottom: 15px;
-        }
+    .register-box input:focus {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #444;
-            font-size: 14px;
-        }
+    .register-box button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      background: linear-gradient(90deg, #FF00C3, #662D8C);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-        input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #bbb;
-            border-radius: 8px;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            margin-bottom: 20px;
-        }
+    .register-box button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    }
 
-        input:focus {
-            border-color: #1a49ca;
-            box-shadow: 0 0 6px rgba(106, 142, 240, 0.4);
-            outline: none;
-        }
+    .register-box p {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #f5f5f5;
+    }
 
-        /* ===== Button ===== */
-        button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
-            background: linear-gradient(90deg, #a20895, #540a6e);
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
+    .register-box a {
+      color: #FFD2F6;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        button:hover {
-            background: linear-gradient(90deg, #a50a9b, #a5088b);
-            transform: translateY(-2px);
-        }
+    .register-box a:hover {
+      text-decoration: underline;
+    }
 
-        /* ===== Responsive ===== */
-        @media (max-width: 400px) {
-            div {
-                width: 90%;
-                padding: 20px;
-            }
-        }
-    </style>
+    @media (max-width: 420px) {
+      .register-box {
+        width: 90%;
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div>
-       
-        <form>
-            <h1>Register</h1>
+  <div class="register-box">
+    <h2>Register</h2>
 
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirm" placeholder="Confirm Password" required>
+      <input type="tel" id="phone" placeholder="Phone (10 digits)" pattern="[0-9]{10}" required>
+      <input type="text" id="location" placeholder="Location" required>
 
-            <input type="text" id="username" placeholder="Enter username" required>
+      <button type="submit">Create Account</button>
+    </form>
 
-            
-            <input type="email" id="email" placeholder="Enter email" required>
+    <p>Already have an account? <a href="./login.html">Login</a></p>
+    <p style="margin-top: 5px;">@7TEEN Brands</p>
+  </div>
 
-            
-            <input type="password" id="password" placeholder="Create password" required
-                pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}"
-                title="Use at least 8 characters, with A-Z, a-z, 0-9, and a symbol.">
-
-            
-            <input type="password" id="confirm" placeholder="Re-enter password" required>
-
-            <input type="tel" id="phone" placeholder="Enter phone number" pattern="[0-9]{10}"
-                title="Enter 10-digit number" required>
-
-           
-            <input type="text" id="location" placeholder="Enter location" required>
-
-            <button type="submit">Register</button>
-            <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; margin-top: 5px;">@7TEEN Brands</p>
-        </form>
-    </div>
-     <script src="./main.js"></script>
+  <script src="main.js"></script>
+  
 </body>
 
 </html>
