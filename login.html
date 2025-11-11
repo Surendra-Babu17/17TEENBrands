@@ -166,38 +166,8 @@
     </main>
   </div>
 
-  <script>
-    // Client-side validation and submit handler (prevent default navigation)
-    (function () {
-      const form = document.getElementById('loginForm');
-      const demo = document.getElementById('demo');
-      const pwd = document.getElementById('user_password');
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault(); // prevent page reload so you can handle login with JS
-        demo.textContent = ''; // clear previous message
-
-        // basic HTML5 form validity check
-        if (!form.checkValidity()) {
-          demo.textContent = 'Please fill in a valid email and password.';
-          return;
-        }
-
-        // extra pattern check for password (redundant but clearer feedback)
-        const pattern = new RegExp(pwd.getAttribute('pattern'));
-        if (!pattern.test(pwd.value)) {
-          demo.textContent = 'Password must be 8+ chars with uppercase, lowercase, number and special character.';
-          pwd.focus();
-          return;
-        }
-
-        // TODO: replace this with real authentication logic (fetch to backend / Firebase / etc.)
-        demo.style.color = 'green';
-        demo.textContent = 'Validation passed — replacing this with real login flow.';
-        // Example: send credentials via fetch() and handle response
-        // fetch('/api/login', { method:'POST', body: JSON.stringify({ email:..., password:... }) ... })
-      });
-    })();
+  <script src="main.js">
+  
   </script>
 </body>
 </html>
